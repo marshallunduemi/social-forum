@@ -24,6 +24,9 @@
     :root {
         --reddit-orange: #ff4500;
         --reddit-blue: #0079d3;
+    }
+
+    [data-theme="dark"] {
         --bg-dark: #030303;
         --bg-secondary: #1a1a1b;
         --bg-tertiary: #272729;
@@ -32,26 +35,20 @@
         --border-color: #343536;
     }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    [data-theme="light"] {
+        --bg-dark: #ecedeeff;
+        --bg-secondary: #ffffff;
+        --bg-tertiary: #f6f7f8;
+        --text-primary: #1c1c1c;
+        --text-secondary: #7c7c7c;
+        --border-color: #ccc;
     }
-    [data-theme="dark"] {
-            --bg-primary: #030303;
-            --bg-secondary: #1a1a1b;
-            --bg-hover: #272729;
-            --text-primary: #d7dadc;
-            --text-secondary: #818384;
-            --border-color: #343536;
-            --card-bg: #1a1a1b;
-            --upvote-color: #ff4500;
-        }
 
     body {
         background-color: var(--bg-dark);
         color: var(--text-primary);
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        transition: background-color 0.3s, color 0.3s;
     }
 
     /* Navbar */
@@ -105,7 +102,7 @@
     .search-box {
         background-color: var(--bg-tertiary);
         border: 1px solid var(--border-color);
-        border-radius: 20px;
+        border-radius: 5px;
         padding: 0.5rem 1rem;
         width: 100%;
         max-width: 600px;
@@ -304,6 +301,9 @@
         gap: 1rem;
         margin-bottom: 1rem;
         align-items: center;
+        background: var(--bg-secondary);
+        padding:10px;
+        border-radius: 10px;
     }
 
     .feed-btn {
@@ -529,10 +529,16 @@
         cursor: pointer;
     }
 
-    
+.theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
 
     .join-btn:hover {
-      background-color: #0041a3;
+        background-color: #0041a3;
     }
     </style>
 </head>
@@ -541,21 +547,32 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <button class="hamburger" onclick="toggleSidebar()">
+            <!-- <button class="hamburger" onclick="toggleSidebar()">
                 <i class="fas fa-bars"></i>
-            </button>
+            </button> -->
             <a class="navbar-brand ms-3" href="#">
                 <div class="reddit-logo">
                     <i class="fab fa-reddit-alien"></i>
                 </div>
-                reddit
+                <span class="d-none d-lg-block">Sabitalk</span>
             </a>
-            <div class="flex-grow-1 mx-3">
-                <input type="text" class="search-box" placeholder="Search Reddit">
+            <ul class="navbar nav me-auto d-none d-lg-block">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showHome()"><i class="fas fa-compass"></i> Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-fire"></i> Popular</a>
+                    </li>
+                </ul>
+            <div class="flex-grow-1 mx-4">
+                <input type="text" class="search-box " placeholder="Search Reddit">
             </div>
             <div class="navbar-controls d-flex align-items-center d-none d-lg-block">
-                <button class="btn-get-app">
+                <!-- <button class="btn-get-app">
                     <i class="fas fa-qrcode"></i> Get App
+                </button> -->
+                <button class="theme-toggle me-3" onclick="toggleTheme()">
+                    <i class="fas fa-sun" id="themeIcon"></i>
                 </button>
                 <button class="btn-login">Log In</button>
                 <button class="btn text-light">
@@ -701,7 +718,7 @@
                 <div class="col-lg-10 col-12 mx-auto">
 
 
-                
+
 
                     <div class="row">
                         <div class="col-lg-8 col-12 mx-auto">
@@ -721,72 +738,6 @@
                                     <i class="fas fa-filter"></i>
                                 </button> -->
                             </div>
-
-
-                           
-  <h5 class="fw-bold mb-2 text-light">Join communities to build your Home feed</h5>
-
-  <div class="row g-3 mb-3">
-    <!-- Card 1 -->
-    <div class="col-md-6">
-      <div class="community-card d-flex justify-content-between align-items-start">
-        <div class="d-flex">
-          <img src="https://placehold.co/40x40" class="community-icon" alt="">
-          <div>
-            <h6 class="mb-1 fw-semibold">AncestryDNA</h6>
-            <small class="text-muted">121K weekly visitors</small>
-            <p class="mt-2 mb-0 text-secondary small">Connect with others who share a passion for uncovering their family tree.</p>
-          </div>
-        </div>
-        <button class="btn join-btn">Join</button>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="col-md-6">
-      <div class="community-card d-flex justify-content-between align-items-start">
-        <div class="d-flex">
-          <img src="https://placehold.co/40x40" class="community-icon" alt="">
-          <div>
-            <h6 class="mb-1 fw-semibold">Somalia</h6>
-            <small class="text-muted">44K weekly visitors</small>
-            <p class="mt-2 mb-0 text-secondary small">A welcoming community for the Somali people, culture, and language.</p>
-          </div>
-        </div>
-        <button class="btn join-btn">Join</button>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="col-md-6">
-      <div class="community-card d-flex justify-content-between align-items-start">
-        <div class="d-flex">
-          <img src="https://placehold.co/40x40" class="community-icon" alt="">
-          <div>
-            <h6 class="mb-1 fw-semibold">Durban</h6>
-            <small class="text-muted">7.1K weekly visitors</small>
-            <p class="mt-2 mb-0 text-secondary small">Discover the best of Durban, South Africa - from beaches to culture.</p>
-          </div>
-        </div>
-        <button class="btn join-btn">Join</button>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="col-md-6">
-      <div class="community-card d-flex justify-content-between align-items-start">
-        <div class="d-flex">
-          <img src="https://placehold.co/40x40" class="community-icon" alt="">
-          <div>
-            <h6 class="mb-1 fw-semibold">Africa</h6>
-            <small class="text-muted">73K weekly visitors</small>
-            <p class="mt-2 mb-0 text-secondary small">Continentally relevant discussion and the best of Africa for Africans.</p>
-          </div>
-        </div>
-        <button class="btn join-btn">Join</button>
-      </div>
-    </div>
-  </div>
  
 
                             <!-- Post -->
@@ -967,7 +918,7 @@
                         <!-- Right Sidebar -->
                         <div class="col-lg-4 d-none d-lg-block">
                             <div class="right-sidebar">
-                                <div class="popular-communities">
+                                <div class="popular-communities mt-n3">
                                     <div class="section-title">Popular Communities</div>
 
                                     <div class="community-item">
@@ -1046,45 +997,82 @@
         </div>
     </div>
 
-    
-<!-- Navbar mobile START -->
-<div class="navbar navbar-mobile">
-	<ul class="navbar-nav">
-		<!-- Nav item Home -->
-		<li class="nav-item">
-			<a class="nav-link" href="index.html"><i class="fas fa-home fa-fw fs-4"></i>
-				<!-- <span class="mb-0 nav-text">Home</span> -->
-			</a>	
-		</li>
 
-		<!-- Nav item My Trips -->
-		<li class="nav-item"> 
-			<a class="nav-link" href="account-bookings.html"><i class="fas fa-compass fa-fw fs-4"></i>
-				<!-- <span class="mb-0 nav-text">My Trips</span> -->
-			</a>	
-		</li>
+    <!-- Navbar mobile START -->
+    <div class="navbar navbar-mobile">
+        <ul class="navbar-nav">
+            <!-- Nav item Home -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw fs-4"></i>
+                    <!-- <span class="mb-0 nav-text">Home</span> -->
+                </a>
+            </li>
 
-		<!-- Nav item Offer -->
-		<li class="nav-item"> 
-			<a class="nav-link" href="offer-detail.html"><i class="fas fa-fire fa-fw fs-4"></i>
-				<!-- <span class="mb-0 nav-text">Offer</span>  -->
-			</a>
-		</li>
+            <!-- Nav item My Trips -->
+            <li class="nav-item">
+                <a class="nav-link" href="account-bookings.html"><i class="fas fa-compass fa-fw fs-4"></i>
+                    <!-- <span class="mb-0 nav-text">My Trips</span> -->
+                </a>
+            </li>
 
-		<!-- Nav item Account -->
-		<li class="nav-item"> 
-			<a class="nav-link" href="account-profile.html"><i class="fas fa-user fa-fw fs-4"></i>
-				<!-- <span class="mb-0 nav-text">Account</span> -->
-			</a>
-		</li>
-	</ul>
-</div>
-<!-- Navbar mobile END -->
+            <!-- Nav item Offer -->
+            <li class="nav-item">
+                <a class="nav-link" href="offer-detail.html"><i class="fas fa-fire fa-fw fs-4"></i>
+                    <!-- <span class="mb-0 nav-text">Offer</span>  -->
+                </a>
+            </li>
+
+            <!-- Nav item Account -->
+            <li class="nav-item">
+                <a class="nav-link" href="account-profile.html"><i class="fas fa-user fa-fw fs-4"></i>
+                    <!-- <span class="mb-0 nav-text">Account</span> -->
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Navbar mobile END -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-    <script>
+<script>
+    // Load saved theme on page load
+    document.addEventListener("DOMContentLoaded", function () {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.body.setAttribute("data-theme", savedTheme);
+        updateThemeIcon(savedTheme);
+    });
+
+    function toggleTheme() {
+        const currentTheme = document.body.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        document.body.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+        updateThemeIcon(newTheme);
+    }
+
+    function updateThemeIcon(theme) {
+        const icon = document.getElementById("themeIcon");
+        if (theme === "dark") {
+            icon.classList.remove("fa-sun");
+            icon.classList.add("fa-moon");
+        } else {
+            icon.classList.remove("fa-moon");
+            icon.classList.add("fa-sun");
+        }
+    }
+ 
+
+    // function toggleTheme() {
+    //     const html = document.documentElement;
+    //     const currentTheme = html.getAttribute('data-theme');
+    //     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    //     html.setAttribute('data-theme', newTheme);
+
+    //     const icon = document.getElementById('themeIcon');
+    //     icon.className = newTheme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+    // }
+
     function toggleSidebar() {
-        // document.getElementById('sidebar').classList.toggle('show');
+        document.getElementById('sidebar').classList.toggle('show');
     }
 
     // Close sidebar when clicking outside on mobile
@@ -1098,6 +1086,9 @@
             }
         }
     });
+
+    // Set default theme to dark
+    document.documentElement.setAttribute('data-theme', 'light');
     </script>
 </body>
 
