@@ -678,91 +678,17 @@
 
     <!-- Main Content -->
     <div class="main-content">
-        <div class="container">
-            <div class="row mt-4">
+        <div class="container"> 
+
+            <div class="row mb-6">
                 <div class="col-lg-10 col-12 mx-auto">
-                    <!-- Story Carousel -->
-                    <div class="story-carousel">
-                        <div class="story-card">
-                            <img src="https://external-preview.redd.it/ukraine-uses-british-storm-shadow-cruise-missiles-to-strike-v0-Ydjx01s79sIEcQzTEnUXB8bHZwf0vqiW_S8nJAY7VhA.jpeg?width=640&crop=smart&auto=webp&s=ab34b2ab68dcb52e5c65c7825ac62db6005fc825"
-                                alt="Ukraine story">
-                            <div class="story-overlay">
-                                <div class="story-title">Ukraine hits Russian chem p...</div>
-                                <div class="story-subtitle">Ukraine uses British Storm Shadow crui...</div>
-                                <div class="story-source">
-                                    <i class="fas fa-globe"></i>
-                                    <span>r/worldnews and more</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="story-card">
-                            <img src="https://preview.redd.it/travis-kelce-is-now-an-investor-in-six-flags-and-cedar-point-v0-s9p7xgcyyiwf1.jpeg?width=640&crop=smart&auto=webp&s=aa43d57871ba6f2b08f6670e41854eeb234087ea"
-                                alt="Six Flags">
-                            <div class="story-overlay">
-                                <div class="story-title">Kelce invests in Six Flags</div>
-                                <div class="story-subtitle">Travis Kelce is now an investor in Six Fla...</div>
-                                <div class="story-source">
-                                    <i class="fas fa-globe"></i>
-                                    <span>r/sports and more</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="story-card">
-                            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=400&h=250&fit=crop"
-                                alt="Louvre">
-                            <div class="story-overlay">
-                                <div class="story-title">Louvre reopens after heist</div>
-                                <div class="story-subtitle">Louvre Museum reopens for the first ti...</div>
-                                <div class="story-source">
-                                    <i class="fas fa-globe"></i>
-                                    <span>r/europe and more</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="story-card">
-                            <img src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=400&h=250&fit=crop"
-                                alt="SpaceX">
-                            <div class="story-overlay">
-                                <div class="story-title">SpaceX settles trespa...</div>
-                                <div class="story-subtitle">Elon Musk, Cards Against Hu...</div>
-                                <div class="story-source">
-                                    <i class="fas fa-globe"></i>
-                                    <span>r/NPR and more</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="row mt-n4 mb-6">
-                <div class="col-lg-10 col-12 mx-auto">
-
-
-
-
+ 
                     <div class="row">
                         <div class="col-lg-8 col-12 mx-auto">
-
-                            <!-- Feed Controls -->
-                            <div class="feed-controls">
-                                <button class="feed-btn active">
-                                    <i class="fas fa-star"></i> Best
-                                </button>
-                                <button class="feed-btn">
-                                    <i class="fas fa-fire"></i> Hot
-                                </button>
-                                <button class="feed-btn">
-                                    <i class="fas fa-chart-line"></i> Everywhere
-                                </button>
-                                <!-- <button class="feed-btn">
-                                    <i class="fas fa-filter"></i>
-                                </button> -->
-                            </div> 
+ 
 
                             <!-- Post -->
-                            <div class="post-card">
+                            <div class="post-card mt-4">
                                 <div class="post-header">
                                     <div class="post-avatar"></div>
                                     <a href="#" class="post-subreddit">r/AmIOverreacting</a>
@@ -872,117 +798,16 @@
                                     </button>
                                 </div>
                             </div>
+ 
 
-                            <!-- Post -->
-                            <div class="post-card">
-                                <div class="post-header">
-                                    <div class="post-avatar"></div>
-                                    <a href="#" class="post-subreddit">r/AmIOverreacting</a>
-                                    <span class="post-time">• 16 hr. ago</span>
-                                </div>
-                                <div class="post-title">
-                                    Michael Jordan on if he still loves basketball: "I wish I could take a magic pill,
-                                    put on shorts and go out and play the game of basketball today, because that's who I
-                                    am. That type of competition, that type of competitiveness, is what I live for. And
-                                    I miss it."
-                                </div>
-
-                                <div class="post-actions">
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-arrow-up"></i>
-                                        <span>12.5k</span>
-                                    </button>
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-comment"></i>
-                                        <span>2.1k</span>
-                                    </button>
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-share"></i>
-                                        <span>Share</span>
-                                    </button>
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-bookmark"></i>
-                                    </button>
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-ellipsis-h"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Post -->
-                            <div class="post-card">
-                                <div class="post-header">
-                                    <div class="post-avatar"></div>
-                                    <a href="#" class="post-subreddit">r/AmIOverreacting</a>
-                                    <span class="post-time">• 16 hr. ago</span>
-                                </div>
-                                <div class="post-title">
-                                    I think I need to break up with my boyfriend AIO
-                                </div>
-                                <img src="https://preview.redd.it/some-disturbing-excerpts-from-virginia-giuffres-new-memoir-v0-a0gj2h2xrjwf1.jpg?width=1080&crop=smart&auto=webp&s=45d77504860397c47956646789100df08b01b61d"
-                                    alt="Post image" class="post-image">
-                                <div class="post-actions">
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-arrow-up"></i>
-                                        <span>12.5k</span>
-                                    </button>
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-comment"></i>
-                                        <span>2.1k</span>
-                                    </button>
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-share"></i>
-                                        <span>Share</span>
-                                    </button>
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-bookmark"></i>
-                                    </button>
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-ellipsis-h"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Post -->
-                            <div class="post-card">
-                                <div class="post-header">
-                                    <div class="post-avatar"></div>
-                                    <a href="#" class="post-subreddit">r/AmIOverreacting</a>
-                                    <span class="post-time">• 16 hr. ago</span>
-                                </div>
-                                <div class="post-title">
-                                    I think I need to break up with my boyfriend AIO
-                                </div>
-                                <img src="https://external-preview.redd.it/ugQw-l-AhbPoH7A6DT5FwXdGtQQEQWbiqM_xxF-fYUw.jpg?width=1080&crop=smart&auto=webp&s=7a188723d488987af8898e84fb747c5fdea8d53d"
-                                    alt="Post image" class="post-image">
-                                <div class="post-actions">
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-arrow-up"></i>
-                                        <span>12.5k</span>
-                                    </button>
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-comment"></i>
-                                        <span>2.1k</span>
-                                    </button>
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-share"></i>
-                                        <span>Share</span>
-                                    </button>
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-bookmark"></i>
-                                    </button>
-                                    <button class="post-action-btn">
-                                        <i class="fas fa-ellipsis-h"></i>
-                                    </button>
-                                </div>
-                            </div>
+                           
 
                         </div>
 
                         <!-- Right Sidebar -->
                         <div class="col-lg-4 d-none d-lg-block">
                             <div class="right-sidebar">
-                                <div class="popular-communities mt-n3">
+                                <div class="popular-communities mt-n1">
                                     <div class="section-title">Popular Communities</div>
 
                                     <div class="community-item">
